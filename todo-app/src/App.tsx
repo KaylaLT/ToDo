@@ -1,10 +1,24 @@
 import React from "react";
-// eslint-disable-next-line
-import logo from "./logo.svg";
-import "./App.css";
+import {TodoListItem} from './todoListItem';
+import { Todo } from "./type.d";
+
+const todos: Todo[] = [
+  {
+    text: 'Update App',
+    complete: false,
+  },
+  {
+    text: 'Test app',
+    complete: false,
+  },
+];
 
 function App() {
-  return <>Hello World</>; 
+  return (
+    <ul>
+      <TodoListItem todo={todos[0]} />
+      <TodoListItem todo={todos[1]} />
+    </ul>
+  );
 }
- 
 export default App;

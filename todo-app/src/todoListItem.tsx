@@ -1,10 +1,6 @@
 import React from 'react';
+import {Todo} from './type.d';
 
-/* to-do item will be a text-string */
-interface Todo {
-  text: string;
-  complete: boolean;
-}
 /*to-do items will be used as a prop*/
 interface Props {
   todo: Todo;
@@ -16,7 +12,7 @@ export const TodoListItem: React.FC<Props> = ({todo}) => {
       <label
         style={{textDecoration: todo.complete ? 'line-through' : undefined }}
       >
-        <input type="checkbox" checked={todo.complete} /> {todo.text}
+        <input type="checkbox" checked= {todo.complete} /> {todo.text}
       </label>
     </li>
   )};
